@@ -13,19 +13,19 @@
     }
     @keyframes colorCycle {
         0% {
-          background-color: black;
+          background-color: rgb(255, 255, 255);
         }
         25% {
-          background-color: rgba(58, 37, 10, 0.579); /* Change to your desired color */
+          background-color: rgba(255, 255, 255, 0.885); /* Change to your desired color */
         }
         50% {
-          background-color: rgba(9, 54, 31, 0.819); /* Change to your desired color */
+          background-color: rgba(255, 255, 255, 0.618); /* Change to your desired color */
         }
         75% {
-          background-color: rgba(44, 11, 59, 0.705); /* Change to your desired color */
+          background-color: rgba(255, 255, 255, 0.395); /* Change to your desired color */
         }
         100% {
-          background-color: rgb(0, 0, 0);
+          background-color: rgb(255, 255, 255);
         }
       }
       
@@ -34,15 +34,15 @@
         position: absolute;
         top: 4%;
         left: 2%;
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         font-family: 'Playfair Display';
         font-size: 20px;
     }
     .banner-text{
         text-align: center;
-        color: #347d93ce;
+        color: #000000bf;
         padding-top: 350px;
-        font-size: 30px;
+        font-size: 50px;
         font-style: bold;
         font-family: 'Playfair Display';
         
@@ -89,7 +89,7 @@
     
     #bottomNav {
         text-align: center;
-        background-color: #ffffff; 
+        background-color: rgb(0, 0, 0); 
     }
     
     #bottomNav ul {
@@ -108,20 +108,20 @@
         display: block;
         padding: 10px 20px;
         text-decoration: none;
-        color: #000000;
+        color: #ffffff;
         font-weight: bold;
         transition: background-color 0.3s, color 0.3s;
     }
     
     #bottomNav a:hover {
-        background-color: rgba(0, 0, 0, 0.579);
-        color: #000000;
+        background-color: rgba(255, 255, 255, 0.579);
+        color: #ffffff;
     }
 
     /*--feature--*/
 
 #feature{
-    background-color: #000000;
+    background-color: rgb(255, 255, 255);
 }
 .title-text{
     text-align: center;
@@ -187,7 +187,7 @@
 }
 
 .feature-text {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -219,7 +219,7 @@
 
 #footer {
     padding: 10px 0px 20px;
-    background: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
     height: 10px; /* Adjust the height */
     bottom: 0;
     position: relative;
@@ -231,13 +231,13 @@
 .Title-text {
     display: flex;
     align-items: center;
-    color: #000000;
+    color: #ffffff;
 }
 
 .Title-text p {
     display: flex;
     align-items: center; /* Adjust the spacing between text and icons */
-    color: #000000
+    color: #ffffff
 }
 
 
@@ -282,8 +282,8 @@ body {
 }
 
 .project-image img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 50%;
+    max-height: 50%;
     object-fit: cover; /* Maintain aspect ratio while fitting within the container */
     margin: 10px; /* Add 10px spacing on all sides of each image */
     border-radius: 50%; /* Apply a circular border-radius */
