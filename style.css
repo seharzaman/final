@@ -1,9 +1,10 @@
+/* General reset for margin and padding */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
+/* Banner section */
 #banner {
     background: rgb(0, 0, 0);
     background-size: cover;
@@ -13,21 +14,11 @@
 }
 
 @keyframes colorCycle {
-    0% {
-        background-color: rgb(255, 255, 255);
-    }
-    25% {
-        background-color: rgba(255, 255, 255, 0.885);
-    }
-    50% {
-        background-color: rgba(255, 255, 255, 0.618);
-    }
-    75% {
-        background-color: rgba(255, 255, 255, 0.395);
-    }
-    100% {
-        background-color: rgb(255, 255, 255);
-    }
+    0% { background-color: rgb(255, 255, 255); }
+    25% { background-color: rgba(255, 255, 255, 0.885); }
+    50% { background-color: rgba(255, 255, 255, 0.618); }
+    75% { background-color: rgba(255, 255, 255, 0.395); }
+    100% { background-color: rgb(255, 255, 255); }
 }
 
 .mainlogo {
@@ -45,7 +36,7 @@
     color: #000000bf;
     padding-top: 350px;
     font-size: 50px;
-    font-style: bold;
+    font-weight: bold;
     font-family: 'Playfair Display';
 }
 
@@ -90,7 +81,7 @@
 
 #bottomNav {
     text-align: center;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0); 
 }
 
 #bottomNav ul {
@@ -119,6 +110,7 @@
     color: #ffffff;
 }
 
+/* Feature section */
 #feature {
     background-color: rgb(255, 255, 255);
 }
@@ -221,25 +213,25 @@
     font-size: 18px;
 }
 
+/* Footer section */
 #footer {
-    padding: 10px 0px 20px;
+    padding: 20px 0;
     background: rgb(0, 0, 0);
-    bottom: 0;
     position: relative;
     width: 100%;
-    overflow: hidden;
     font-family: 'Playfair Display';
+    text-align: center;
 }
 
-.Title-text {
+#footer .Title-text {
     display: flex;
+    justify-content: center;
     align-items: center;
     color: #ffffff;
 }
 
-.Title-text p {
-    display: flex;
-    align-items: center;
+#footer .Title-text p {
+    margin: 0;
     color: #ffffff;
 }
 
@@ -284,6 +276,7 @@ body {
     object-fit: cover;
     margin: 10px;
     border-radius: 50%;
+    object-fit: cover;
     object-position: center top;
 }
 
@@ -364,7 +357,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Media Queries */
+/* Responsive adjustments */
 @media (max-width: 1200px) {
     .banner-text {
         padding-top: 300px;
@@ -375,21 +368,9 @@ body {
         font-size: 24px;
     }
 
-    .mainlogo {
-        font-size: 18px;
-    }
-
-    .feature-box {
-        flex-direction: column;
-    }
-
-    .features {
-        flex-basis: 100%;
-    }
-
-    .features-img {
-        flex-basis: 100%;
-        margin: 0 auto;
+    .features h1 {
+        font-size: 30px;
+        margin-top: -120px;
     }
 
     .features-img img {
@@ -402,11 +383,11 @@ body {
     }
 
     .yellow-text {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .blue-text {
-        font-size: 26px;
+        font-size: 25px;
     }
 }
 
@@ -421,7 +402,7 @@ body {
     }
 
     .features h1 {
-        font-size: 24px;
+        font-size: 25px;
         margin-top: -100px;
     }
 
@@ -435,43 +416,428 @@ body {
     }
 
     .yellow-text {
+        font-size: 18px;
+    }
+
+    .blue-text {
+        font-size: 20px;
+    }
+}
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Banner section */
+#banner {
+    background: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    animation: colorCycle 10s linear infinite;
+}
+
+@keyframes colorCycle {
+    0% { background-color: rgb(255, 255, 255); }
+    25% { background-color: rgba(255, 255, 255, 0.885); }
+    50% { background-color: rgba(255, 255, 255, 0.618); }
+    75% { background-color: rgba(255, 255, 255, 0.395); }
+    100% { background-color: rgb(255, 255, 255); }
+}
+
+.mainlogo {
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 2%;
+    color: rgb(0, 0, 0);
+    font-family: 'Playfair Display';
+    font-size: 20px;
+}
+
+.banner-text {
+    text-align: center;
+    color: #000000bf;
+    padding-top: 350px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Playfair Display';
+}
+
+.banner-btn {
+    font-family: 'Playfair Display';
+    margin: 50px auto 0;
+    padding-top: 53px;
+    font-size: 28px;
+    padding-right: 10px;
+}
+
+.banner-btn a {
+    width: 200px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.579);
+    color: #ffffff;
+    border: .5px solid rgba(0, 0, 0, 0.579);
+    position: relative;
+    z-index: 1;
+    font-family: 'Playfair Display';
+    font-weight: bold;
+}
+
+.down-arrow {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.down-arrow img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.down-arrow img:hover {
+    transform: translateY(3px);
+}
+
+#bottomNav {
+    text-align: center;
+    background-color: rgb(0, 0, 0); 
+}
+
+#bottomNav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+#bottomNav li {
+    display: inline-block;
+    margin: 0;
+}
+
+#bottomNav a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#bottomNav a:hover {
+    background-color: rgba(255, 255, 255, 0.579);
+    color: #ffffff;
+}
+
+/* Feature section */
+#feature {
+    background-color: rgb(255, 255, 255);
+}
+
+.title-text {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.title-text p {
+    margin: auto;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.title-text h1 {
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.feature-box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.features {
+    flex-basis: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.features-img {
+    flex-basis: 50%;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.features-img img {
+    margin-bottom: 5%;
+    margin-top: 5%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.features h1 {
+    margin-bottom: 20px;
+    font-weight: 100;
+    color: #ffffff;
+    margin-top: -150px;
+}
+
+.features-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 70px;
+    margin-top: 5%;
+}
+
+.feature-text {
+    color: rgb(0, 0, 0);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: -80px;
+    font-size: 18px;
+    font-family: 'Playfair Display';
+    text-align: left;
+}
+
+.yellow-text {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-family: 'Playfair Display';
+}
+
+.blue-text {
+    color: rgb(102, 33, 33);
+    font-size: 30px;
+    font-family: 'Playfair Display';
+}
+
+.feature-text p1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.feature-text p2 {
+    font-size: 18px;
+}
+
+/* Footer section */
+#footer {
+    padding: 20px 0;
+    background: rgb(0, 0, 0);
+    position: relative;
+    width: 100%;
+    font-family: 'Playfair Display';
+    text-align: center;
+}
+
+#footer .Title-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+#footer .Title-text p {
+    margin: 0;
+    color: #ffffff;
+}
+
+body {
+    background-color: #000000;
+    text-align: center;
+}
+
+.ashmanimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 14px);
+    overflow: hidden;
+}
+
+.project-image {
+    position: relative;
+}
+
+.project-name {
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    transition: bottom 0.5s ease-in-out;
+    opacity: 0;
+    font-family: 'Playfair Display';
+    font-weight: bold;
+}
+
+.project-image:hover .project-name {
+    bottom: -4%;
+    opacity: 1;
+}
+
+.project-image img {
+    max-width: 50%;
+    max-height: 50%;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+#banner {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#video-background {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+#page2, #page1 {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.contact-message {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 200px;
+    font-family: 'Playfair Display';
+}
+
+.contact-message h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-message p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .banner-text {
+        padding-top: 300px;
+        font-size: 40px;
+    }
+
+    .banner-btn {
+        font-size: 24px;
+    }
+
+    .features h1 {
+        font-size: 30px;
+        margin-top: -120px;
+    }
+
+    .features-img img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .feature-text {
+        font-size: 16px;
+    }
+
+    .yellow-text {
         font-size: 20px;
     }
 
     .blue-text {
-        font-size: 24px;
-    }
-
-    .project-image img {
-        max-width: 80%;
-    }
-
-    .contact-message {
-        margin-top: 50px;
+        font-size: 25px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .banner-text {
-        padding-top: 150px;
-        font-size: 24px;
+        padding-top: 200px;
+        font-size: 30px;
     }
 
     .banner-btn {
-        font-size: 18px;
-    }
-
-    .mainlogo {
-        font-size: 16px;
-    }
-
-    .feature-text {
-        font-size: 12px;
+        font-size: 20px;
     }
 
     .features h1 {
-        font-size: 20px;
+        font-size: 25px;
         margin-top: -100px;
+    }
+
+    .features-img img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .feature-text {
+        font-size: 14px;
     }
 
     .yellow-text {
@@ -481,9 +847,429 @@ body {
     .blue-text {
         font-size: 20px;
     }
+}
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Banner section */
+#banner {
+    background: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    animation: colorCycle 10s linear infinite;
+}
+
+@keyframes colorCycle {
+    0% { background-color: rgb(255, 255, 255); }
+    25% { background-color: rgba(255, 255, 255, 0.885); }
+    50% { background-color: rgba(255, 255, 255, 0.618); }
+    75% { background-color: rgba(255, 255, 255, 0.395); }
+    100% { background-color: rgb(255, 255, 255); }
+}
+
+.mainlogo {
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 2%;
+    color: rgb(0, 0, 0);
+    font-family: 'Playfair Display';
+    font-size: 20px;
+}
+
+.banner-text {
+    text-align: center;
+    color: #000000bf;
+    padding-top: 350px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Playfair Display';
+}
+
+.banner-btn {
+    font-family: 'Playfair Display';
+    margin: 50px auto 0;
+    padding-top: 53px;
+    font-size: 28px;
+    padding-right: 10px;
+}
+
+.banner-btn a {
+    width: 200px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.579);
+    color: #ffffff;
+    border: .5px solid rgba(0, 0, 0, 0.579);
+    position: relative;
+    z-index: 1;
+    font-family: 'Playfair Display';
+    font-weight: bold;
+}
+
+.down-arrow {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.down-arrow img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.down-arrow img:hover {
+    transform: translateY(3px);
+}
+
+#bottomNav {
+    text-align: center;
+    background-color: rgb(0, 0, 0); 
+}
+
+#bottomNav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+#bottomNav li {
+    display: inline-block;
+    margin: 0;
+}
+
+#bottomNav a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#bottomNav a:hover {
+    background-color: rgba(255, 255, 255, 0.579);
+    color: #ffffff;
+}
+
+/* Feature section */
+#feature {
+    background-color: rgb(255, 255, 255);
+}
+
+.title-text {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.title-text p {
+    margin: auto;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.title-text h1 {
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.feature-box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.features {
+    flex-basis: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.features-img {
+    flex-basis: 50%;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.features-img img {
+    margin-bottom: 5%;
+    margin-top: 5%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.features h1 {
+    margin-bottom: 20px;
+    font-weight: 100;
+    color: #ffffff;
+    margin-top: -150px;
+}
+
+.features-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 70px;
+    margin-top: 5%;
+}
+
+.feature-text {
+    color: rgb(0, 0, 0);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: -80px;
+    font-size: 18px;
+    font-family: 'Playfair Display';
+    text-align: left;
+}
+
+.yellow-text {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-family: 'Playfair Display';
+}
+
+.blue-text {
+    color: rgb(102, 33, 33);
+    font-size: 30px;
+    font-family: 'Playfair Display';
+}
+
+.feature-text p1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.feature-text p2 {
+    font-size: 18px;
+}
+
+/* Footer section */
+#footer {
+    padding: 20px 0;
+    background: rgb(0, 0, 0);
+    position: relative;
+    width: 100%;
+    font-family: 'Playfair Display';
+    text-align: center;
+}
+
+#footer .Title-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+#footer .Title-text p {
+    margin: 0;
+    color: #ffffff;
+}
+
+body {
+    background-color: #000000;
+    text-align: center;
+}
+
+.ashmanimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 14px);
+    overflow: hidden;
+}
+
+.project-image {
+    position: relative;
+}
+
+.project-name {
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    transition: bottom 0.5s ease-in-out;
+    opacity: 0;
+    font-family: 'Playfair Display';
+    font-weight: bold;
+}
+
+.project-image:hover .project-name {
+    bottom: -4%;
+    opacity: 1;
+}
+
+.project-image img {
+    max-width: 50%;
+    max-height: 50%;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+#banner {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#video-background {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+#page2, #page1 {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.contact-message {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 200px;
+    font-family: 'Playfair Display';
+}
+
+.contact-message h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-message p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .banner-text {
+        padding-top: 300px;
+        font-size: 40px;
+    }
+
+    .banner-btn {
+        font-size: 24px;
+    }
+
+    .features h1 {
+        font-size: 30px;
+        margin-top: -120px;
+    }
 
     .features-img img {
-        width: 150px;
-        height: 150px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .feature-text {
+        font-size: 16px;
+    }
+
+    .yellow-text {
+        font-size: 20px;
+    }
+
+    .blue-text {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-text {
+        padding-top: 200px;
+        font-size: 30px;
+    }
+
+    .banner-btn {
+        font-size: 20px;
+    }
+
+    .features h1 {
+        font-size: 25px;
+        margin-top: -100px;
+    }
+
+    .features-img img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .feature-text {
+        font-size: 14px;
+    }
+
+    .yellow-text {
+        font-size: 18px;
+    }
+
+    .blue-text {
+        font-size: 20px;
     }
 }
