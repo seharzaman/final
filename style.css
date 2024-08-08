@@ -36,7 +36,7 @@
     top: 4%;
     left: 2%;
     color: rgb(0, 0, 0);
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display';
     font-size: 20px;
 }
 
@@ -45,12 +45,12 @@
     color: #000000bf;
     padding-top: 350px;
     font-size: 50px;
-    font-weight: bold;
-    font-family: 'Playfair Display', serif;
+    font-style: bold;
+    font-family: 'Playfair Display';
 }
 
 .banner-btn {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display';
     margin: 50px auto 0;
     padding-top: 53px;
     font-size: 28px;
@@ -65,10 +65,10 @@
     padding: 15px 0;
     background-color: rgba(0, 0, 0, 0.579);
     color: #ffffff;
-    border: 0.5px solid rgba(0, 0, 0, 0.579);
+    border: .5px solid rgba(0, 0, 0, 0.579);
     position: relative;
     z-index: 1;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display';
     font-weight: bold;
 }
 
@@ -119,8 +119,7 @@
     color: #ffffff;
 }
 
-/* Feature Section */
-#feature{
+#feature {
     background-color: rgb(255, 255, 255);
 }
 
@@ -168,8 +167,8 @@
 .features-img img {
     margin-bottom: 5%;
     margin-top: 5%;
-    width: 100%;
-    height: auto;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
@@ -197,20 +196,20 @@
     padding: 20px;
     margin-top: -80px;
     font-size: 18px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display';
     text-align: left;
 }
 
 .yellow-text {
     color: rgb(255, 255, 255);
     font-size: 25px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display';
 }
 
 .blue-text {
     color: rgb(102, 33, 33);
     font-size: 30px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display';
 }
 
 .feature-text p1 {
@@ -229,7 +228,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display';
 }
 
 .Title-text {
@@ -270,7 +269,7 @@ body {
     text-align: center;
     transition: bottom 0.5s ease-in-out;
     opacity: 0;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display';
     font-weight: bold;
 }
 
@@ -280,12 +279,11 @@ body {
 }
 
 .project-image img {
-    max-width: 100%;
-    height: auto;
+    max-width: 50%;
+    max-height: 50%;
     object-fit: cover;
     margin: 10px;
     border-radius: 50%;
-    object-fit: cover;
     object-position: center top;
 }
 
@@ -307,8 +305,7 @@ body {
     z-index: -1;
 }
 
-#page2,
-#page1 {
+#page2, #page1 {
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -333,7 +330,7 @@ body {
     border-radius: 10px;
     color: #ffffff;
     margin-top: 200px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display';
 }
 
 .contact-message h2 {
@@ -368,6 +365,39 @@ body {
 }
 
 /* Media Queries */
+@media (max-width: 1200px) {
+    .banner-text {
+        padding-top: 300px;
+        font-size: 40px;
+    }
+
+    .banner-btn {
+        font-size: 24px;
+    }
+
+    .mainlogo {
+        font-size: 18px;
+    }
+
+    .feature-box {
+        flex-direction: column;
+    }
+
+    .features {
+        flex-basis: 100%;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+        margin: 0 auto;
+    }
+
+    .features-img img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
 @media (max-width: 768px) {
     .banner-text {
         padding-top: 200px;
@@ -378,22 +408,26 @@ body {
         font-size: 20px;
     }
 
-    .features {
-        flex-basis: 100%;
-        margin-bottom: 20px;
-    }
-
-    .features-img {
-        flex-basis: 100%;
+    .features h1 {
+        font-size: 24px;
+        margin-top: -100px;
     }
 
     .features-img img {
-        width: 100%;
-        height: auto;
+        width: 200px;
+        height: 200px;
     }
 
-    .feature-box {
-        flex-direction: column;
+    .feature-text {
+        font-size: 16px;
+    }
+
+    .yellow-text {
+        font-size: 20px;
+    }
+
+    .blue-text {
+        font-size: 24px;
     }
 
     .project-image img {
@@ -420,19 +454,24 @@ body {
     }
 
     .feature-text {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .features h1 {
-        font-size: 24px;
+        font-size: 20px;
         margin-top: -100px;
     }
 
     .yellow-text {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .blue-text {
-        font-size: 24px;
+        font-size: 20px;
+    }
+
+    .features-img img {
+        width: 150px;
+        height: 150px;
     }
 }
